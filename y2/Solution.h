@@ -6,22 +6,31 @@ class Solution {
 public:
     static int knapsack(int w[], int v[],const int W,const int N) 
     {
-        //dp[i][j]表示将前i件物品装进限重为j的背包可以获得的最大价值, 0<=i<=N, 0<=j<=W
-        const int nnn = N;
-        const int www = W;
-        int  dp[nnn+1][www+1] ;
-        for (int j = 0; j < W+1; j++)
+        //dp[i][j]表示将前i种物品装进限重为j的背包可以获得的最大价值, 0<=i<N, 0<=j<W
+        int  dp[N][W+1] ;
+
+        //  第一列 0
+        for (int i = 0; i < N; i++)
         {
-            dp[0][j] = 0;
+            dp[i][0] = 0;
         }
-        for(int i=1; i < N+1; i++)
+        //  第一行 只有第0种物品
+        for(int j=0; j<= W; j++)
+        {
+            dp[0][j] = (j / w[0]) * v[0];
+        }
+        // i: 总共0-i种  j:背包重量 j
+        // 第二层种类加1个：j++
+        // 不用第i种，dp[i][j] = dp[i-1][j]
+        // 用第i种，dp[i][j] = dp[i][] + v[i]
+        for(int i=1; i < N; i++)
         {
             cout  << "i: " << i;
-            for (int j = 0; j < W+1; j++)
+            for (int j = 1; j < W+1; j++)
             {
-                if(j >= w[i-1])
+                if(j >= w[i])
                 {
-                    dp[i][j] = max(dp[i-1][j], dp[i-1][j-w[i-1]] + v[i-1]) ;
+                    dp[i][j] = max(dp[i-1][j], dp[i][j-w[i]] + v[i]) ;
                     cout << " (j " << j << ") :" << dp[i][j] ;
                 }
                 else
@@ -35,7 +44,7 @@ public:
             
         }
         
-        return dp[6][13];
+        return dp[5][13];
     }
     
 };
