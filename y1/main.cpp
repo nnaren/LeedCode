@@ -12,7 +12,7 @@ int main()
     int w[6] = {1, 3, 7,  9, 3, 2};
     int v[6] = {2, 5, 6, 11, 7, 3};
     Solution solution;
-    solution.knapsack(w, v, 13, 6);
-    cout << 0 << endl;
+    
+    cout << solution.knapsack(w, v, 13, 6) << endl;
     return 0;
 }
