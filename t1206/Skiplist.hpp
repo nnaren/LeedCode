@@ -75,8 +75,7 @@ public:
         for (int i = curLevel-1; i >=0 ; i--)
         {
             while (x->level[i].forward &&
-                    (x->level[i].forward->val < num || 
-                    x->level[i].forward->val == num))
+                    x->level[i].forward->val <= num)
             {
                 x = x->level[i].forward;
                 
