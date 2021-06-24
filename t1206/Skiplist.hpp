@@ -1,6 +1,9 @@
 #include<random>
 #include <cstring>
 #include<limits.h>
+#include<iostream>
+
+using namespace std;
 
 #define SKIPLIST_MAXLEVEL 16
 #define SKIPLIST_P 0.25
@@ -40,21 +43,20 @@ public:
     {
         // int rank[SKIPLIST_MAXLEVEL];
         // struct SkipListNode* update[SKIPLIST_MAXLEVEL];
-        // struct SkipListNode* x = header;
-        // for (int i = level-1; i >=0 ; i--)
-        // {
-        //     rank[i] = i == (level-1) ? 0 : rank[i+1];
-        //     while (x->level[i].forward &&
-        //             (x->level[i].forward->val < target || 
-        //             x->level[i].forward->val == target))
-                        
-        //     {
-        //         rank[i] += x->level[i].span;
-        //     }
-        //     update[i] = x;
+        struct SkipListNode* curNode = head;
+        int curLevel = level;
+        for (int curLevel = level-1; curLevel >=0; curLevel--)
+        {
+            
+            while (curNode->level[curLevel].forward &&
+                    curNode->val < target  )
+            {
+                curNode = curNode->level[curLevel].forward;
+            }
+            if (curNode->val==target)
+                return true;
+        }
         return false;
-        
-    
     }
     
     void add(int num) 
@@ -72,7 +74,7 @@ public:
         SkipListNode *curNode = new SkipListNode(num, curLevel);
 
         struct SkipListNode* x = head;
-        for (int i = curLevel-1; i >=0 ; i--)
+        for (int i = 0; i <curLevel ; i++)
         {
             while (x->level[i].forward &&
                     x->level[i].forward->val <= num)
