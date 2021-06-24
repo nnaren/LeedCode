@@ -36,9 +36,9 @@ int main()
         cout << "Found!" << endl;   // 返回 false
     obj->add(4);
     obj->search(1);   // 返回 true
-    // obj->erase(0);    // 返回 false，0 不在跳表中
-    // obj->erase(1);    // 返回 true
-    // obj->search(1);   // 返回 false，1 已被擦除
+    obj->erase(0);    // 返回 false，0 不在跳表中
+    obj->erase(1);    // 返回 true
+    obj->search(1);   // 返回 false，1 已被擦除
 
 
     // bool param_3 = obj->erase(num);

@@ -36,6 +36,7 @@ public:
         head = new SkipListNode(INT_MAX);
         for (int i = 0; i < SKIPLIST_MAXLEVEL; ++i) { 
         	head->level[i].forward = nullptr;
+            head->val = INT_MIN;
         }
     }
 
@@ -44,7 +45,6 @@ public:
         // int rank[SKIPLIST_MAXLEVEL];
         // struct SkipListNode* update[SKIPLIST_MAXLEVEL];
         struct SkipListNode* curNode = head;
-        int curLevel = level;
         for (int curLevel = level-1; curLevel >=0; curLevel--)
         {
             
@@ -73,9 +73,10 @@ public:
         }
         SkipListNode *curNode = new SkipListNode(num, curLevel);
 
-        struct SkipListNode* x = head;
+        struct SkipListNode* x;
         for (int i = 0; i <curLevel ; i++)
         {
+            x = head;
             while (x->level[i].forward &&
                     x->level[i].forward->val <= num)
             {
@@ -88,6 +89,40 @@ public:
     }
     
     bool erase(int num) {
+        struct SkipListNode* preNode;
+        struct SkipListNode* curNode;
+        
+        for (int curLevel = level-1; curLevel >=0; curLevel--)
+        {
+            preNode = head;
+            curNode = preNode->level[curLevel].forward;
+            while (curNode &&
+                    curNode->val < num  )
+            {
+                preNode = curNode;
+                curNode = curNode->level[curLevel].forward;
+            }
+            if (curNode->val==num)
+            {
+                preNode->level[curLevel].forward = curNode->level[curLevel].forward;
+                for (int i = curLevel-1; i >=0; i--)
+                {
+                    preNode = head;
+                    curNode = preNode->level[i].forward;
+                    while (curNode->val != num)
+                    {
+         
+                        preNode = curNode;
+                        curNode = curNode->level[i].forward;
+                    }
+                    preNode->level[curLevel].forward = curNode->level[curLevel].forward;
+                    
+                }
+                free(curNode);
+                return true;
+            }
+                
+        }
         return false;
     }
     int randomLevel(){
