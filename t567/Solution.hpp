@@ -24,17 +24,17 @@ public:
             
             // debug 输出的位置
             cout << "Window : " << left << right << endl; 
-            while (valid >= s1.size())
+            while (right-left >= s1.size())
             {
                 if(valid == need.size())
                     return true;
                 char d = s2[left];
                 left++;
-                if (need.count(c))
+                if (need.count(d))
                 {
-                    if(window[c] == need[c])
+                    if(window[d] == need[d])
                         valid--;
-                    window[c]--;
+                    window[d]--;
                 }
             }
             
