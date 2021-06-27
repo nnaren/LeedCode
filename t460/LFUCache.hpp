@@ -3,7 +3,8 @@
 #include<list>
 using namespace std;
 #include"Node.hpp"
-class LFUCache {
+class LFUCache 
+{
 public:
     LFUCache(int _cap) {
         minFreq = 0;
