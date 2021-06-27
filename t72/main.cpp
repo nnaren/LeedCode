@@ -28,8 +28,12 @@ exection -> execution (插入 'u')
 0 <= word1.length, word2.length <= 500
 word1 和 word2 由小写英文字母组成 
 */
-
+#include"Solution.hpp"
+#include<iostream>
 int main()
 {
-    
+    string word1 = "horse", word2 = "ros";
+    Solution slt;
+    cout  << slt.minDistance(word1, word2)<< endl;
+    return 0;
 }
