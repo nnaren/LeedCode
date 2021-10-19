@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/percy/code1/LeedCode/heap_sort/heapsort.hpp
+iostream
+-
+vector
+-
+
+/Users/percy/code1/LeedCode/heap_sort/main.cpp
+heapsort.hpp
+/Users/percy/code1/LeedCode/heap_sort/heapsort.hpp
+iostream
+-
+vector
+-
+
