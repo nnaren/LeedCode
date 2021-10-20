@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+SKIPLIST_MAXLEVEL	Skiplist.hpp	/^#define SKIPLIST_MAXLEVEL /;"	d
+SKIPLIST_P	Skiplist.hpp	/^#define SKIPLIST_P /;"	d
+SkipListLevel	Skiplist.hpp	/^    struct SkipListLevel  $/;"	s	struct:SkipListNode
+SkipListNode	Skiplist.hpp	/^    SkipListNode (int _val, int sz=SKIPLIST_MAXLEVEL) $/;"	f	struct:SkipListNode
+SkipListNode	Skiplist.hpp	/^typedef struct SkipListNode {$/;"	s
+SkipListNode	Skiplist.hpp	/^} SkipListNode;$/;"	t	typeref:struct:SkipListNode
+Skiplist	Skiplist.hpp	/^    Skiplist() $/;"	f	class:Skiplist
+Skiplist	Skiplist.hpp	/^class Skiplist {$/;"	c
+add	Skiplist.hpp	/^    void add(int num) $/;"	f	class:Skiplist
+erase	Skiplist.hpp	/^    bool erase(int num) {$/;"	f	class:Skiplist
+forward	Skiplist.hpp	/^        struct SkipListNode *forward;$/;"	m	struct:SkipListNode::SkipListLevel	typeref:struct:SkipListNode::SkipListLevel::SkipListNode
+head	Skiplist.hpp	/^    struct SkipListNode  *head, *tail;$/;"	m	class:Skiplist	typeref:struct:Skiplist::SkipListNode
+level	Skiplist.hpp	/^    int level;$/;"	m	class:Skiplist
+level	Skiplist.hpp	/^    } level[];$/;"	m	struct:SkipListNode	typeref:struct:SkipListNode::SkipListLevel
+main	main.cpp	/^int main()$/;"	f
+randomLevel	Skiplist.hpp	/^    int randomLevel(){$/;"	f	class:Skiplist
+search	Skiplist.hpp	/^    bool search(int target) $/;"	f	class:Skiplist
+tail	Skiplist.hpp	/^    struct SkipListNode  *head, *tail;$/;"	m	class:Skiplist	typeref:struct:Skiplist::
+val	Skiplist.hpp	/^    int  val;$/;"	m	struct:SkipListNode
