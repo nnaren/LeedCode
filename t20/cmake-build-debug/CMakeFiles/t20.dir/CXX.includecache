@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/percy/code1/LeedCode/t20/Solution.h
+string
+-
+stack
+-
+unordered_map
+-
+
+/Users/percy/code1/LeedCode/t20/main.cpp
+iostream
+-
+Solution.h
+/Users/percy/code1/LeedCode/t20/Solution.h
+

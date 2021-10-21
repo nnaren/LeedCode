@@ -1,0 +1,3 @@
+/Users/percy/code1/LeedCode/t20/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/percy/code1/LeedCode/t20/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/percy/code1/LeedCode/t20/cmake-build-debug/CMakeFiles/t20.dir
