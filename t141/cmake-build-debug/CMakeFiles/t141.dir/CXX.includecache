@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/percy/code1/LeedCode/t141/Solution.h
+
+/Users/percy/code1/LeedCode/t141/main.cpp
+iostream
+-
+Solution.h
+/Users/percy/code1/LeedCode/t141/Solution.h
+
