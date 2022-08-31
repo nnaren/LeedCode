@@ -3,6 +3,6 @@ project(leetcode)
 
 set(CMAKE_CXX_STANDARD 20)
 
-# add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
 
-add_subdirectory(t946)
+
