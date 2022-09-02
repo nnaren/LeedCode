@@ -30,4 +30,28 @@ public:
         return prevNode;
        
     }
+
+    /**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+
+    ListNode* reverseList(ListNode* head) {
+        if (!head)
+            return NULL;
+        ListNode* nxt = head->next;
+        ListNode* nn;
+        while (!nxt) {
+            nn = nxt->next;
+            nxt->next = head;
+            head = nxt;
+            nxt = nn;
+        }
+        return head;
+
+    }
 };

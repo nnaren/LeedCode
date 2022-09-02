@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/percy/code1/LeedCode/exam0822/Solution.hpp
+iostream
+-
+
+/Users/percy/code1/LeedCode/exam0822/main.cpp
+iostream
+-
+Solution.hpp
+/Users/percy/code1/LeedCode/exam0822/Solution.hpp
+

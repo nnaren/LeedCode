@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/percy/code1/LeedCode/t208/Solution.h
+vector
+-
+string
+-
+
+/Users/percy/code1/LeedCode/t208/main.cpp
+iostream
+-
+Solution.h
+/Users/percy/code1/LeedCode/t208/Solution.h
+
