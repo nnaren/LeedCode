@@ -39,9 +39,18 @@
 // p 和 q 均存在于给定的二叉树中。
 
 #include "Solution.hpp"
-
+#include <iostream>
+using namespace std;
 int main()
 {
+    TreeNode* root = new TreeNode(3,
+                                  new TreeNode(5, new TreeNode(6), new TreeNode(2, new TreeNode(7), new TreeNode(4))),
+                                  new TreeNode(1, new TreeNode(0), new TreeNode(8))
+                                 );
     
+    TreeNode* p = root->left;
+    TreeNode* q = root->left->right->right;
+    Solution sol;
+    cout << sol.lowestCommonAncestor(root, p ,q)->val << endl;
     return 0;
 }

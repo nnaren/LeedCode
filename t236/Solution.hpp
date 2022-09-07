@@ -7,10 +7,11 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-#include"TreeNode.hpp"
+#include"../tree_struct.h"
+
 class Solution {
 public:
-    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+    TreeNode* lowestCommonAncestor2(TreeNode* root, TreeNode* p, TreeNode* q) {
         if (root == nullptr)
         {
             return nullptr;
@@ -33,4 +34,24 @@ public:
         
         return left == nullptr ? right:left;
     }
+
+    TreeNode* lowestCommonAncestor(TreeNode * root , TreeNode *p , TreeNode *q) {
+        dfs(root, p, q);
+        return ans;
+    }
+
+    bool dfs(TreeNode * root, TreeNode *p , TreeNode *q){
+        if(root == nullptr) {
+            return false;
+        }
+
+        bool lchild = dfs(root->left, p, q);
+        bool rchild = dfs(root->right, p, q);
+        if((lchild && rchild) || ((root->val == p->val || root->val == q->val) && (lchild ||rchild)))
+            ans = root;
+        return lchild || rchild || (root->val == p->val || root->val == q->val);
+
+    }
+private: 
+    TreeNode* ans;
 };
