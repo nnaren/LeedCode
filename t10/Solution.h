@@ -1,6 +1,14 @@
 //
 // Created by Percy on 2021/11/1.
 //
+/*
+// 给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。
+
+ '.' 匹配任意单个字符
+ '*' 匹配零个或多个前面的那一个元素
+ 所谓匹配，是要涵盖 整个 字符串 s的，而不是部分字符串。
+
+*/
 
 #ifndef T10_SOLUTION_H
 #define T10_SOLUTION_H
@@ -34,6 +42,50 @@ public:
         }
         return dp[m][n];
     }
+    // 放弃 ！！！ 不归路！
+    bool isMatchByRecursion(string s, string p) {
+        sLen = s.length();
+        pLen = p.length();
+        return match(s, p, 0, 0);
+    }
+    bool match(string s, string p, int i, int j) {
+        if(i == sLen) {
+            if(pLen-j>=2 && p[j+1]=='*') {
+                return (  match(s,p,i,j+2));
+            }
+            return j == pLen || (p[j]=='*' && match(s,p,i-1,j+1)) ||  (p[j]=='*' && p[j-1]=='.' && match(s,p,i,j+1));
+            // return i == sLen;
+        } else if(j == pLen) {
+            return i == sLen;
+        } else if (p[j] == '.') {
+            return (i < sLen) && match(s, p, i+1, j+1);
+        } else if (p[j] != '*' && s[i] != p[j]) {
+            if(j < pLen-1 && p[j+1] == '*') {
+                return match(s, p, i, j+2);
+            }    
+        } else if(p[j] == '*') {  // 两种情况 ： s[i-1] == p[j-1] 和 p[j-1] =='.'
+            if(s[i-1] == p[j-1]) {
+                return  (s[i-1] == s[i] && match(s, p, i+1, j+1)) || match(s, p, i, j+1);
+            } 
+            if(p[j-1] =='.') {
+                bool res = false;
+                for(int t=0; t<=sLen - i;t++)
+                    res |= match(s, p, i+t, j+1);
+                return res;
+            }
+            // return (s[i-1] == p[j-1] || p[j-1] =='.') && (match(s, p, i, j+1));  // 
+        } else {
+            // bool res2 = false;
+            // for(int t=0; (t<sLen - i) && s[i+t] == s[i];t++)
+            //     res2 |= match(s, p, i+t, j+1);
+            // return res2;
+            return (s[i] == p[j]) && match(s, p, i+1, j+1);
+        }
+        return false;
+    }
+int sLen;
+int pLen;
+
 };
 
 #endif //T10_SOLUTION_H
