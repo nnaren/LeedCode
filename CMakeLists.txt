@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 # add_executable(${PROJECT_NAME} main.cpp)
  
-add_subdirectory(t946)
+add_subdirectory(t672)
