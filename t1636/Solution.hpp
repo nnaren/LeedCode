@@ -11,12 +11,9 @@ public:
         unordered_map<int,int> numFrequency;
         // unordered_map<int,int> numFrequency;
         for(auto & n : nums) {
-            if (numFrequency.count(n))
-            {
+            
                 numFrequency[n]++;
-            } else {
-                numFrequency[n] = 1;
-            }
+           
             
         }
         sort(nums.begin(), nums.end(), [&numFrequency] (int x, int y ) { 
@@ -36,9 +33,9 @@ public:
             
         }
         sort(nums.begin(), nums.end(), [&numFrequency] (int x, int y ) { 
-                                            if( numFrequency.count(x) == nnumFrequency.count(y))
+                                            if( numFrequency.count(x) == numFrequency.count(y))
                                                 return x>y;
-                                            return  numFrequency.count(x) < nnumFrequency.count(y);
+                                            return  numFrequency.count(x) < numFrequency.count(y);
                                         }
         ); 
         return nums;
