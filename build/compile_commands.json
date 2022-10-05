@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/red/code/LeedCode/build/t63",
-  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/test.dir/main.cpp.o -c /home/red/code/LeedCode/t63/main.cpp",
-  "file": "/home/red/code/LeedCode/t63/main.cpp"
-}
-]
