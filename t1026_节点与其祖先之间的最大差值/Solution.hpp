@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include "../tree_struct.h"
 #include <vector>
 using namespace std;
 
