@@ -28,13 +28,12 @@ public:
         }
         for(int i = step; i < candidates.size(); i++ ) {
             if(i>step && candidates[i-1]==candidates[i])
-            continue;
+                continue;
             int curSum = sum + candidates[i];
             if(curSum > ta) {
                 
                 break;
             }
-                
             c.push_back(candidates[i]);
             dfs(candidates, i+1, curSum);
             c.pop_back();

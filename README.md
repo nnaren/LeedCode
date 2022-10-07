@@ -69,7 +69,8 @@
 *  827 [最大人工岛](t827/Solution.hpp)          困难 dfs 岛屿标记 
 * offer33 [二叉搜索树的后序遍历序列](offer33_二叉搜索树的后序遍历序列/Solution.hpp)  中等/22/9/30 优化：单调栈（递增）
 *  40 [组合总和II](t40_组合总和II/Solution.hpp) 中等/22/9/28 剪枝：有序、重复且不为第一个 (i > start && candidates[i] == candidates[i - 1])
-
+*  46 [t46_全排列I](t46_全排列I/Solution.hpp)
+*  47 [t47_全排列II](t47_全排列II/Solution.hpp) 中等/22/10/7 剪枝：有序、重复且不为第一个(i > 0 && nums[i] == nums[i - 1] && !vis[i - 1])
 
 ## 算法：层次遍历、BFS
 *  116 [充填每个节点的下一个右侧节点](t116/Solution.h) 层次遍历、BFS     22/9/1
