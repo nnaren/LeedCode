@@ -38,6 +38,7 @@
 ## 数据结构：栈
 *  946 [验证栈序列](t946/Solution.hpp)   22/8/31
 * 1475 [商品折扣后的最终价格](t1475/Solution.h)  单调栈、从后往前、迭代 22/9/1
+* t856 [括号的分数](t856_括号的分数/Solution.hpp) 栈，括号：右括号结算。
 
 ## 数据结构：滑动窗口
 * offer59 [滑动窗口的最大值](offer59/Solution.hpp) 困难  算法1 优先队列 priority_queue ：存储二元组(num, index)  pair<int, int> ; 算法2 单调队列： deque<int> ：存储坐标index
