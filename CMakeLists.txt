@@ -6,4 +6,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 # add_executable(${PROJECT_NAME} main.cpp)
  
-add_subdirectory(t672)
+add_subdirectory(t1901_寻找峰值II)
+add_subdirectory(t1694_重新格式化电话号码)
