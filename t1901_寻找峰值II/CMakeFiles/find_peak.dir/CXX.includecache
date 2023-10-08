@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/percy/code1/LeedCode/show.hpp
+iostream
+-
+
+/Users/percy/code1/LeedCode/t1901_寻找峰值II/Solution.hpp
+iostream
+-
+vector
+-
+
+/Users/percy/code1/LeedCode/t1901_寻找峰值II/main.cpp
+iostream
+-
+Solution.hpp
+/Users/percy/code1/LeedCode/t1901_寻找峰值II/Solution.hpp
+../show.hpp
+/Users/percy/code1/LeedCode/show.hpp
+

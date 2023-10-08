@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/percy/code1/LeedCode/t1115_交替打印FooBar/Solution.h
+iostream
+-
+string
+-
+vector
+-
+thread
+-
+
+/Users/percy/code1/LeedCode/t1115_交替打印FooBar/main.cpp
+iostream
+-
+Solution.h
+/Users/percy/code1/LeedCode/t1115_交替打印FooBar/Solution.h
+thread
+-
+mutex
+-
+condition_variable
+-
+vector
+-
+

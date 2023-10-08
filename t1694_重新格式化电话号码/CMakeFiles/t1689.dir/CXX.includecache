@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/percy/code1/LeedCode/t1694_重新格式化电话号码/Solution.hpp
+iostream
+-
+string
+-
+vector
+-
+
+/Users/percy/code1/LeedCode/t1694_重新格式化电话号码/main.cpp
+iostream
+-
+Solution.hpp
+/Users/percy/code1/LeedCode/t1694_重新格式化电话号码/Solution.hpp
+
