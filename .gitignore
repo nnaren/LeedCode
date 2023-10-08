@@ -5,3 +5,8 @@ Solution
 tempCodeRunnerFile
 /win
 build/
+.idea
+cmake-build-debug
+CMakeFiles
+.idea
+Testing
