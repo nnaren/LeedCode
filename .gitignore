@@ -10,3 +10,7 @@ cmake-build-debug
 CMakeFiles
 .idea
 Testing
+*.cmake
+*.iml
+*.cbp
+Makefile
