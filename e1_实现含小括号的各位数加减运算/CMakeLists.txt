@@ -1,2 +1,2 @@
 
-add_executable(ok ./main.c)
+add_executable(main ./main.c)

@@ -35,17 +35,18 @@ int pop(Stack* stack) {
     }
     return stack->array[stack->top--];
 }
-int peek(Stack* stack) {
-    if (isEmpty(stack)) {
-        printf("Stack underflow\n");
-        return -1;
-    }
-    return stack->array[stack->top];
-}
-void deleteStack(Stack* stack) {
-    free(stack->array);
-    free(stack);
-}
+//int peek(Stack* stack) {
+//    if (isEmpty(stack)) {
+//        printf("Stack underflow\n");
+//        return -1;
+//    }
+//    return stack->array[stack->top];
+//}
+
+//void deleteStack(Stack* stack) {
+//    free(stack->array);
+//    free(stack);
+//}
 
 typedef struct Context_t
 {
@@ -85,7 +86,7 @@ static int addSub(int left, int right, char op)
             return (left - right);
         default:
             assert(0);
-            return 0;
+//            return 0;
     }
 }
 // 去括号
@@ -95,7 +96,7 @@ void removeBracket (const char *str,char *str2)
     int index_str2 = 0;
     Stack* st = createStack(20);
     int reverse = 1;
-    char* cur = str;
+    const char* cur = str;
     int sign_pos = -1;
     while(*cur != '\0')
     {
@@ -154,7 +155,7 @@ void removeBracket (const char *str,char *str2)
         index+=1;
         cur++;
     }
-    str2[index_str2++] = '\0';
+    str2[index_str2] = '\0';
 }
 int expr(const char *str)
 {
